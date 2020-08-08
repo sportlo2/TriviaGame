@@ -1,0 +1,44 @@
+body {
+    background-image: url("../images/backgroundUmbrella.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: black;
+}
+
+.main {
+background-color: white;
+border: white 1px solid;
+margin: auto;
+margin-top: 10%;
+width: 75%;
+height: 600px;
+opacity: .8;
+
+}
+
+#header {
+    text-align: center;
+    font-size: 60px;
+}
+
+#title {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#subtitle {
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+#submit {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 100px;
+
+}
+#submit:hover {
+background-color: black ;
+color: white;
+border-radius: 10px;
+width: 100px;
+}
