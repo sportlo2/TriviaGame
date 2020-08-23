@@ -76,15 +76,11 @@ function buildQuiz() {
         counter--;
         $("#countdown").html("<h2>Timer:" + counter);
         if (counter === 0) {
-            console.log(done);
+            console.log("done");
             clearInterval(Timer);
             showResults();
         }
     }, 1000);
-
-    //$("#countdown").html(Timer);
-
-
 
     for (var i = 0; i < quizQuestions.length; i++) {
         quizContainer.append('<h3>' + quizQuestions[i].question + '</h3>');
@@ -93,12 +89,11 @@ function buildQuiz() {
                 "' value='" + quizQuestions[i].answers[j] + "''>" + quizQuestions[i].answers[j]);
         }
     }
-    //display submit button once click begin button
-    //add attribute to center button
     $("#results").html("<button id='submit'>Submit</button>");
 
     $("#submit").click(function () {
         console.log("this button works!");
+        showResults();
     });
 }
 
@@ -107,8 +102,22 @@ startBtn.click(buildQuiz);
 
 
 //results show when user selects submit or timer runs out
+var correct = 0;
+var incorrect = 0;
+
 function showResults() {
 
+$("#countdown").remove();
+
+$.each($("input [name='question-0']:checked"), function() {
+    if($(this).val() == quizQuestions[0].correctAnswer) {
+        correct++;
+    } else {
+        incorrect++;
+    }
+}); 
+
+$("#results").html("<p>Correct: " + correct + "</p>" + "<p>Incorrect: " + incorrect + "</p>")
 }
 // show results when hit submit button
 // submitBtn.click(showResults);
