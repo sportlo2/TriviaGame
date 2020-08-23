@@ -28,6 +28,7 @@ opacity: .8;
 
 #subtitle {
 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
 
 #submit {
     background-color: white;
@@ -41,4 +42,12 @@ background-color: black ;
 color: white;
 border-radius: 10px;
 width: 100px;
+}
+
+#countdown {
+    text-align: center;
+}
+
+#results {
+    text-align: center;
 }
